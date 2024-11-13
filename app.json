@@ -1,0 +1,13 @@
+{
+  "name": "Ordo",
+  "description": "Ordo es el backend recomendado para ejecutar Fedired escrito en elixir.",
+  "keywords": [
+    "fediverse"
+  ],
+  "website": "https://joinfedired.org",
+  "dokku": {
+    "plugins": [
+      "postgres"
+    ]
+  }
+}

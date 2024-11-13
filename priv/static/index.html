@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <title>Bienvenido a Ordo - Instalación Rápida</title>
+    <meta name="description" content="Guía rápida para instalar Ordo. Completa la instalación en pocos pasos.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+    <style>
+        :root {
+            --brand-color: #6364FF;
+            --background-color: #f2f2f2;
+            --text-color: #333;
+            --heading-font-size: 1.5rem;
+            --base-padding: 30px;
+            --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            --button-hover-color: #5050d8;
+            --button-bg-color: #6364FF;
+            --button-text-color: #fff;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        main {
+            max-width: 650px;
+            width: 100%;
+            background: #fff;
+            border-radius: 8px;
+            padding: var(--base-padding);
+            box-shadow: var(--box-shadow);
+        }
+
+        header {
+            text-align: center;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: var(--heading-font-size);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: var(--button-hover-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--brand-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--button-hover-color);
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <img class="logo" src="/images/ordo-wide.svg" alt="Logo de Ordo - Instalación" />
+            <h2>¡Casi terminado!</h2>
+        </header>
+
+        <section>
+            <p>¡Felicitaciones! 🎉 Has instalado correctamente Ordo. Ahora, para más instrucciones sobre cómo instalar un frontend, visita nuestra documentación completa.</p>
+            
+            <div class="button-container">
+                <a href="https://docs.fedired.com/ordo/install.html" class="button" target="_blank" rel="noopener noreferrer" aria-label="Visita la documentación de Ordo en GitHub">Ver Documentación</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>¿Necesitas ayuda? Visita nuestra <a href="https://github.com/fedired-dev/ordo/issues/new" target="_blank" rel="noopener noreferrer">sección de soporte</a>.</p>
+        </footer>
+    </main>
+</body>
+</html>

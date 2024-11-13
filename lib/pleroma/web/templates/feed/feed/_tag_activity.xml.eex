@@ -1,0 +1,14 @@
+<item>
+  <title><%= activity_title(@data, Keyword.get(@feed_config, :post_title, %{})) %></title>
+
+
+  <guid isPermalink="true"><%= activity_context(@activity) %></guid>
+  <link><%= activity_context(@activity) %></link>
+  <pubDate><%= to_rfc2822(@data["published"]) %></pubDate>
+
+  <description><%= activity_description(@data) %></description>
+  <%= for attachment <- @data["attachment"] || [] do %>
+    <enclosure url="<%= attachment_href(attachment) %>" type="<%= attachment_type(attachment) %>"/>
+  <% end %>
+
+</item>

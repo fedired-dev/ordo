@@ -1,0 +1,73 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      DB_USER: ordo_owner
+      DB_PASSWORD: ${{ secrets.NEON_PASSWORD }}
+      DB_URL: ${{ secrets.NEON_DB_URL }}
+      DB_NAME: ordo
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Elixir
+      uses: erlef/setup-beam@v1
+      with:
+        elixir-version: '1.14'
+        otp-version: '24'
+
+    - name: Install required system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y git curl build-essential postgresql postgresql-contrib cmake libmagic-dev imagemagick ffmpeg libimage-exiftool-perl nginx certbot unzip libssl-dev automake autoconf libncurses5-dev fasttext
+
+    - name: Create the pleroma user
+      run: |
+        sudo useradd -r -s /bin/false -m -d /var/lib/pleroma -U pleroma
+
+    - name: Install asdf and Elixir
+      run: |
+        git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0
+        echo ". $HOME/.asdf/asdf.sh" >> ~/.bashrc
+        echo ". $HOME/.asdf/completions/asdf.bash" >> ~/.bashrc
+        exec bash
+        asdf plugin-add erlang
+        asdf plugin-add elixir
+        asdf install
+
+    - name: Install Elixir dependencies
+      run: |
+        mix local.hex --force
+        mix local.rebar --force
+        mix deps.get
+
+    - name: Compile Ordo
+      run: |
+        MIX_ENV=prod mix compile
+
+    - name: Verify Database Connection
+      run: |
+        PGPASSWORD=${{ secrets.NEON_PASSWORD }} psql "${{ secrets.NEON_DB_URL }}" -c "SELECT 1"
+
+    - name: Update prod.exs with Neon credentials
+      run: |
+        # Modificar el archivo config/prod.exs para usar las credenciales de Neon
+        sed -i "s|username: \"<user>\",|username: \"${{ secrets.NEON_USER }}\",|" config/prod.exs
+        sed -i "s|password: \"<password>\",|password: \"${{ secrets.NEON_PASSWORD }}\",|" config/prod.exs
+        sed -i "s|hostname: \"localhost\",|hostname: \"${{ secrets.NEON_DB_URL }}\",|" config/prod.exs
+        sed -i "s|database: \"<database>\",|database: \"${{ secrets.NEON_DB_NAME }}\",|" config/prod.exs
+
+    - name: Build the release
+      run: MIX_ENV=prod mix release
