@@ -2,6 +2,8 @@
 
 **Ordo** es un backend descentralizado y de código abierto, construido sobre el código base de **Pleroma**. Este proyecto está diseñado específicamente para alimentar redes sociales federadas como **Fedired**, proporcionando una plataforma robusta que se enfoca en la privacidad y la seguridad de los usuarios, mientras permite una integración fluida con el Fediverso mediante el protocolo **ActivityPub**.
 
+<p align="center"> <a href="https://docs.fedired.com/ordo/install.html" target="_blank" style="text-decoration: none;"> <img src="https://img.shields.io/badge/🔧%20Instalación%20Ordo-Iniciar-blue?style=for-the-badge" alt="Botón de instalación de Ordo"/> </a> </p>
+
 ## Características Destacadas
 
 - **Basado en Pleroma**: Ordo se beneficia de la arquitectura ligera y eficiente de Pleroma, a la vez que integra mejoras y actualizaciones enfocadas en seguridad y privacidad.
@@ -22,5 +24,3 @@ Ordo es más que un backend; es una iniciativa para mejorar la tecnología de re
 - **[Documentación de Ordo](https://docs.fedired.com)**
 
 ---
-
-Ordo continúa el legado de Pleroma en un esfuerzo constante por adaptar y mejorar las capacidades de redes sociales federadas.
