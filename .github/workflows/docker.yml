@@ -1,4 +1,4 @@
-name: Build and Push Docker Image to Docker Hub and GHCR
+name: Cree y envíe una imagen de Docker a Docker Hub y GHCR
 
 on:
   push:

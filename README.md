@@ -4,6 +4,10 @@
 
 <p align="center"> <a href="https://docs.fedired.com/ordo/install.html" target="_blank" style="text-decoration: none;"> <img src="https://img.shields.io/badge/🔧%20Instalación%20Ordo-Iniciar-blue?style=for-the-badge" alt="Botón de instalación de Ordo"/> </a> </p>
 
+<div align="center">
+  <img src="./ordo.png" alt="Ordo Banner"/>
+</div>
+
 ## Características Destacadas
 
 - **Basado en Pleroma**: Ordo se beneficia de la arquitectura ligera y eficiente de Pleroma, a la vez que integra mejoras y actualizaciones enfocadas en seguridad y privacidad.

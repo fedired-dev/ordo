@@ -1,4 +1,4 @@
-name: Publish Docker Image from Docker Hub to GitHub Packages
+name: Publicar Imagen Ordo de Docker desde Docker Hub a paquetes de GitHub
 
 on:
   push:
