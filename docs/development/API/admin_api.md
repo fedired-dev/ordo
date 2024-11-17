@@ -1590,12 +1590,12 @@ Returns the content of the document
     "ref": "master"
   },
   {
-    "build_url": "https://git.pleroma.social/lambadalambda/kenoma/-/jobs/artifacts/${ref}/download?job=build",
-    "git": "https://git.pleroma.social/lambadalambda/kenoma",
+    "build_url": "https://github.com/srnovus/nvus/-/jobs/artifacts/${ref}/download?job=build",
+    "git": "https://github.com/srnovus/nvus",
     "installed": false,
     "installed_refs": [],
-    "name": "kenoma",
-    "ref": "master"
+    "name": "nvus",
+    "ref": "main"
   }
 ]
 ```
@@ -1623,11 +1623,11 @@ Returns the content of the document
     "ref": "master"
   },
   {
-    "build_url": "https://git.pleroma.social/lambadalambda/kenoma/-/jobs/artifacts/${ref}/download?job=build",
-    "git": "https://git.pleroma.social/lambadalambda/kenoma",
-    "installed": false,
-    "name": "kenoma",
-    "ref": "master"
+    "build_url": "https://github.com/srnovus/nvus/-/jobs/artifacts/${ref}/download?job=build",
+    "git": "https://github.com/srnovus/nvus",
+    "installed": true,
+    "name": "nvus",
+    "ref": "main"
   }
 ]
 ```

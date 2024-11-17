@@ -21,7 +21,7 @@ You can give all the options directly on the command line, but missing informati
 Currently, known `<frontend>` values are:
 
 - [admin-fe](https://git.pleroma.social/pleroma/admin-fe)
-- [kenoma](http://git.pleroma.social/lambadalambda/kenoma)
+- [nvus](https://github.com/srnovus/nvus)
 - [pleroma-fe](http://git.pleroma.social/pleroma/pleroma-fe)
 - [fedi-fe](https://git.pleroma.social/pleroma/fedi-fe)
 
