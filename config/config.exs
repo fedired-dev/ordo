@@ -777,7 +777,7 @@ config :pleroma, :frontends,
       "name" => "nvus",
       "git" => "https://github.com/srnovus/nvus",
       "build_url" =>
-        "https://github.com/srnovus/nvus/-/jobs/artifacts/${ref}/download?job=build",
+        "https://github.com/srnovus/nvus/archive/main.zip",
       "ref" => "main"
     },
     "pleroma-fe" => %{
