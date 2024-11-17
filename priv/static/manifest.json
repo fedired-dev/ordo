@@ -1,0 +1,28 @@
+{
+    "short_name": "Ordo",
+    "name": "Ordo Server",
+    "description": "🌐 Ordo: Backend Descentralizado para Redes Sociales – Basado en Pleroma 🚀",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#1f1d2e",
+    "theme_color": "#31748f",
+    "orientation": "natural",
+    "icons": [
+        {
+            "src": "/images/shortcuts/avi.png",
+            "sizes": "400x400",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "share_target": {
+        "action": "/share/",
+        "params": {
+            "title": "title",
+            "text": "text",
+            "url": "url"
+        }
+
+    "categories": ["social", "networking"]
+}
