@@ -773,12 +773,12 @@ config :pleroma, :static_fe, enabled: false
 
 config :pleroma, :frontends,
   available: %{
-    "kenoma" => %{
-      "name" => "kenoma",
-      "git" => "https://git.pleroma.social/lambadalambda/kenoma",
+    "nvus" => %{
+      "name" => "nvus",
+      "git" => "https://github.com/srnovus/nvus",
       "build_url" =>
-        "https://git.pleroma.social/lambadalambda/kenoma/-/jobs/artifacts/${ref}/download?job=build",
-      "ref" => "master"
+        "https://github.com/srnovus/nvus/-/jobs/artifacts/${ref}/download?job=build",
+      "ref" => "main"
     },
     "pleroma-fe" => %{
       "name" => "pleroma-fe",
