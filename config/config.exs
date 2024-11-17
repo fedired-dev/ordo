@@ -775,10 +775,10 @@ config :pleroma, :frontends,
   available: %{
     "nvus" => %{
       "name" => "nvus",
-      "git" => "https://github.com/srnovus/nvus",
+      "git" => "https://gitlab.com/fedired/nvus",
       "build_url" =>
-      "https://github.com/srnovus/nvus/archive/refs/heads/main.zip"
-      #"ref" => "main"
+      "https://gitlab.com/fedired/nvus/-/jobs/artifacts/${ref}/download?job=build",
+      "ref" => "main"
     },
     "pleroma-fe" => %{
       "name" => "pleroma-fe",
