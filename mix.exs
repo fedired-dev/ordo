@@ -8,7 +8,7 @@ defmodule Pleroma.Mixfile do
       app: :pleroma,
       name: "Ordo",
       compat_name: "Pleroma",
-      version: version("1.0.0"),
+      version: version("1.0.1"),
       elixir: "~> 1.11",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: Mix.compilers(),
