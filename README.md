@@ -50,8 +50,7 @@ Ordo es una plataforma diseñada para ser versátil, eficiente y accesible, no s
 ## 🛠️ **Documentación y Recursos**
 
 - **[Repositorio Oficial en GitHub](https://github.com/fedired-dev/ordo)**  
-- **[Guía de Instalación](https://docs.fedired.com/ordo/install.html)**  
-- **[Documentación General](https://docs.fedired.com)**
+- **[Guía de Instalación](https://github.com/fedired-dev/ordo/blob/main/docs/ordo/install.md)**  
 
 ---
 
