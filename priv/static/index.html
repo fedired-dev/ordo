@@ -145,7 +145,7 @@
 
     <!-- Script para obtener la versión desde el servidor -->
     <script>
-        fetch('/api/version') // Reemplaza con la ruta correcta de tu API
+        fetch('mix.exs') 
             .then(response => response.json())
             .then(data => {
                 const versionElement = document.getElementById('software-version');
