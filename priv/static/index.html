@@ -134,28 +134,11 @@
                 <a href="https://help.fedired.com/ordo/interface.html" class="button" target="_blank" rel="noopener noreferrer" aria-label="Visita la documentación de Ordo en GitHub">Ver Documentación</a>
             </div>
 
-            <!-- Contenedor para la versión -->
-            <div class="version" id="software-version">Cargando versión...</div>
+            <div class="version">La versión actual es: <%= @version %></div>
         </section>
 
         <footer>
             <p>¿Necesitas ayuda? Visita nuestra <a href="https://github.com/fedired-dev/ordo/issues/new" target="_blank" rel="noopener noreferrer">sección de soporte</a>.</p>
         </footer>
-    </main>
-
-    <!-- Script para obtener la versión desde el servidor -->
-    <script>
-        fetch('mix.exs') 
-            .then(response => response.json())
-            .then(data => {
-                const versionElement = document.getElementById('software-version');
-                versionElement.textContent = `version: version("${data.version}")`;
-            })
-            .catch(error => {
-                console.error('Error al obtener la versión:', error);
-                const versionElement = document.getElementById('software-version');
-                versionElement.textContent = 'Error al cargar la versión.';
-            });
-    </script>
 </body>
 </html>
