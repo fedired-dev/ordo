@@ -18,6 +18,9 @@
             --button-hover-color: #5050d8;
             --button-bg-color: #6364FF;
             --button-text-color: #fff;
+            --button-small-padding: 10px 20px;
+            --version-bg-color: #f9f9f9;
+            --version-text-color: #666;
         }
 
         body, html {
@@ -85,6 +88,10 @@
             background-color: var(--button-hover-color);
         }
 
+        .button-small {
+            padding: var(--button-small-padding);
+        }
+
         footer {
             text-align: center;
             margin-top: 30px;
@@ -102,13 +109,14 @@
 
         .version {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 20px;
             font-size: 1rem;
-            color: var(--text-color);
-            font-weight: 700;
+            color: var(--version-text-color);
+            background-color: var(--version-bg-color);
+            padding: 10px;
+            border-radius: 8px;
         }
 
-        /* Responsividad */
         @media (max-width: 768px) {
             main {
                 padding: 20px;
@@ -134,10 +142,36 @@
                 <a href="https://help.fedired.com/ordo/interface.html" class="button" target="_blank" rel="noopener noreferrer" aria-label="Visita la documentación de Ordo en GitHub">Ver Documentación</a>
             </div>
 
+            <div class="button-container">
+                <a href="https://github.com/fedired-dev/ordo/releases/latets" class="button button-small" target="_blank" rel="noopener noreferrer" aria-label="Ver los cambios recientes">Ver Cambios</a>
+            </div>
+
+            <div class="version">
+                <strong>Versión instalada:</strong> <span id="version">Cargando...</span>
+            </div>
         </section>
 
         <footer>
             <p>¿Necesitas ayuda? Visita nuestra <a href="https://github.com/fedired-dev/ordo/issues/new" target="_blank" rel="noopener noreferrer">sección de soporte</a>.</p>
         </footer>
+    </main>
+
+    <script>
+        const repoUrl = 'https://api.github.com/repos/fedired-dev/ordo/releases/latest';
+
+        async function getLatestVersion() {
+            try {
+                const response = await fetch(repoUrl);
+                const data = await response.json();
+                const version = data.tag_name; 
+                document.getElementById('version').textContent = version;
+            } catch (error) {
+                console.error('Error al obtener la versión:', error);
+                document.getElementById('version').textContent = 'No se pudo obtener la versión.';
+            }
+        }
+
+        getLatestVersion();
+    </script>
 </body>
 </html>
