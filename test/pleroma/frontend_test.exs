@@ -140,7 +140,7 @@ defmodule Pleroma.FrontendTest do
     end
 
     test "enables a primary frontend" do
-      frontend = %Frontend{name: "Ordo", ref: "v1.0.1"}
+      frontend = %Frontend{name: "Ordo", ref: "v1.0.2"}
       map = Frontend.to_map(frontend)
 
       clear_config([:frontends, :available], %{"ordo" => map})
