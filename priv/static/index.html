@@ -103,8 +103,9 @@
         .version {
             text-align: center;
             margin-top: 10px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--text-color);
+            font-weight: 700;
         }
 
         /* Responsividad */
@@ -132,14 +133,29 @@
             <div class="button-container">
                 <a href="https://help.fedired.com/ordo/interface.html" class="button" target="_blank" rel="noopener noreferrer" aria-label="Visita la documentación de Ordo en GitHub">Ver Documentación</a>
             </div>
-            
-            <div class="version" id="software-version">
-            </div>
+
+            <!-- Contenedor para la versión -->
+            <div class="version" id="software-version">Cargando versión...</div>
         </section>
 
         <footer>
             <p>¿Necesitas ayuda? Visita nuestra <a href="https://github.com/fedired-dev/ordo/issues/new" target="_blank" rel="noopener noreferrer">sección de soporte</a>.</p>
         </footer>
     </main>
+
+    <!-- Script para obtener la versión desde el servidor -->
+    <script>
+        fetch('/api/version') // Reemplaza con la ruta correcta de tu API
+            .then(response => response.json())
+            .then(data => {
+                const versionElement = document.getElementById('software-version');
+                versionElement.textContent = `version: version("${data.version}")`;
+            })
+            .catch(error => {
+                console.error('Error al obtener la versión:', error);
+                const versionElement = document.getElementById('software-version');
+                versionElement.textContent = 'Error al cargar la versión.';
+            });
+    </script>
 </body>
 </html>
