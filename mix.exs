@@ -8,7 +8,7 @@ defmodule Pleroma.Mixfile do
       app: :pleroma,
       name: "Ordo",
       compat_name: "Pleroma",
-      version: version("1.0.2"),
+      version: version("2.1.0"),
       elixir: "~> 1.11",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: Mix.compilers(),
@@ -19,7 +19,7 @@ defmodule Pleroma.Mixfile do
       deps: deps(),
       test_coverage: [tool: :covertool, summary: true],
       # Docs
-      homepage_url: "https://joinfedired.com/",
+      homepage_url: "https://join.fedired.com/",
       source_url: "https://github.com/fedired-dev/ordo",
       docs: [
         source_url_pattern:
