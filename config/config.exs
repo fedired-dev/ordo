@@ -773,11 +773,11 @@ config :pleroma, :static_fe, enabled: false
 
 config :pleroma, :frontends,
   available: %{
-    "nvus" => %{
-      "name" => "nvus",
-      "git" => "https://gitlab.com/fedired/nvus",
+    "fedired-fe" => %{
+      "name" => "fedired-fe",
+      "git" => "https://github.com/fedired-dev/fedired-fe",
       "build_url" =>
-      "https://gitlab.com/fedired/nvus/-/jobs/artifacts/${ref}/download?job=build",
+      "https://github.com/fedired-dev/fedired-fe/releases/latest/download/static.zip",
       "ref" => "main"
     },
     "pleroma-fe" => %{
