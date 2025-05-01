@@ -778,7 +778,8 @@ config :pleroma, :frontends,
       "git" => "https://github.com/fedired-dev/fedired-fe",
       "build_url" =>
       "https://github.com/fedired-dev/fedired-fe/releases/latest/download/static.zip",
-      "ref" => "main"
+      "ref" => "main",
+      "build_dir" => "."
     },
     "pleroma-fe" => %{
       "name" => "pleroma-fe",
